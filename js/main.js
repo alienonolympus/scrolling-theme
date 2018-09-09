@@ -1,8 +1,20 @@
 (function($){
+    $(function(){
+        $(".modal").modal();
+    });
+    $("#section1btn").click(function(){
+        moveTo(".main", 2);
+    });
+    $("#section2btn").click(function(){
+        moveTo(".main", 3);
+    });
+    $("#section3btn").click(function(){
+        moveTo(".main", 4);
+    });
 })(jQuery);
 
 onePageScroll(".main", {
-    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+    sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don"t want to use section
     easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
                                      // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
     animationTime: 700,              // AnimationTime let you define how long each section takes to animate
@@ -14,5 +26,5 @@ onePageScroll(".main", {
     keyboard: true,                  // You can activate the keyboard controls
     responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
                                      // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
-                                     // the browser's width is less than 600, the fallback will kick in.
+                                     // the browser"s width is less than 600, the fallback will kick in.
  });
